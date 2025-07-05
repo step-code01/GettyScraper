@@ -18,3 +18,7 @@ while IFS= read -r url; do
     echo "Saved getty_video_$i.$ext"
     ((i++))
 done < video_urls.txt
+
+:'If you do have a page where .mp4 links appear directly in HTML, this script structurally works but for static HTML sites.
+Getty uses JavaScript to dynamically load videos.
+So when curl fetches the page, it gets only static HTML, not the actual playable video URLs.'
